@@ -1,0 +1,119 @@
+body, html, #root {
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(135deg, #d6c1ff, #f1ecff); 
+  font-family: Arial, sans-serif;
+  color: black;
+}
+
+.container {
+  position: relative;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 15px;
+  padding: 2rem;
+  color: #222;
+}
+.aviso-card {
+  max-width: 400px;
+  margin: 2rem auto;
+  background-color: #fff99c; 
+  padding: 40px 20px 40px 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+  position: relative;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aviso-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem; 
+  width: 100%;
+}
+
+.aviso-input-group > div {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+
+.aviso-input {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.aviso-buttons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.aviso-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  min-width: 40px; 
+  font-weight: bold;
+}
+
+.save-btn {
+  background-color: #4caf50;
+}
+
+.cancel-btn {
+  background-color: #f44336;
+}
+
+.aviso-add-btn {
+  background-color: #ffc107;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+  font-size: 28px; 
+  color: #333;
+  padding: 0;
+  line-height: 1;
+  margin-top: 0.5rem;
+  align-self: flex-end; 
+}
+
+.aviso-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+
+.aviso-message {
+  flex-grow: 1;
+}
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: red;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+

@@ -1,0 +1,67 @@
+.inquilinos-container {
+  padding: 2rem;
+}
+
+.add-member-button {
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #5e3ea1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.add-member-card {
+  background: #f0f0f0;
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 400px;
+}
+
+.add-member-card input {
+  display: block;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.submit-button {
+  background-color: #5e3ea1;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.feedback-message {
+  margin-top: 1rem;
+  color: green;
+}
+
+.container-membros {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 40px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.card-membros {
+  padding: 1.5rem;
+  width: 200px;
+  border: 1px solid #5e3ea1;
+  border-radius: 40px;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  background-color: white;
+}
+
+.card-membros h3 {
+  margin: 0;
+}
+
+.h3-nome-membros {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}

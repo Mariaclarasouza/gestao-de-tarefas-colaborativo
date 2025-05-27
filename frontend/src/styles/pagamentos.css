@@ -1,0 +1,106 @@
+.pagamentos-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.icon-header {
+    color: #7a37d1;
+}
+
+.alerta-nenhum-boleto {
+    background-color: #c9aef0;
+    padding: 12px 24px;
+    border-radius: 12px;
+    color: #300a6e;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.subtitulo {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.lista-pagamentos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.item-pagamento {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border: 2px solid #7a37d1;
+    border-radius: 20px;
+    padding: 16px 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    margin: 0 auto; 
+}
+
+.info-pagamento {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 18px;
+    color: #300a6e;
+    white-space: nowrap;
+}
+
+.icon-taxa {
+    background-color: #7a37d1;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.status {
+    font-size: 14px;
+    color: #666;
+}
+
+.check-icon {
+    background-color: #7a37d1;
+    color: white;
+    border-radius: 50%;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.paginacao {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.paginacao-btn {
+    background-color: #c9aef0;
+    border: none;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #300a6e;
+    font-size: 18px;
+}
+
+.pagamentos-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+  
+  .pagamentos-container {
+    padding: 40px;
+    font-family: 'Arial', sans-serif;
+    flex: 1;
+  }

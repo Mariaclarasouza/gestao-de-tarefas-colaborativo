@@ -1,0 +1,68 @@
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #d6c1ff, #f1ecff);
+  background-size: cover;
+  padding: 2rem;
+}
+
+.login-card {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-card .btn-primary {
+  background: #5300fa;
+  border-color: #5300fa;
+  transition: all 0.3s ease;
+}
+
+.login-card .btn-primary:hover {
+  background-color: #5300fa;
+  border-color: #8800ff;
+}
+
+.login-card .register-link {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.tituloh1 {
+  margin-top: 50px;
+}
+
+.botao-enviar {
+  background-color: #5300fa;
+  border-color: #8800ff;
+  color: white;
+}
+
+.span-titulos {
+  font-size: 20px;
+}
+.create-btn {
+  margin-bottom: 1rem;
+  width: 140px;
+  padding: 8px;
+  font-weight: bold;
+  background: #5300fa;
+  color: white;
+}

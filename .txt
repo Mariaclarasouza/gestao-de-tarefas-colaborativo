@@ -1,0 +1,8 @@
+// é assim que tem que ficar seu arquivo .env
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=123456
+DB_NAME=TaskFlow
+JWT_SECRET=seucodigojwe
+EMAIL_USER=emaildeteste
+EMAIL_PASS=passdeappdogooglw 
