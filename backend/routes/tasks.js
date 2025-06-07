@@ -333,36 +333,48 @@ router.delete("/tasks/:id", async (req, res) => {
       (error) => {
         if (error) {
           return db.rollback(() => {
-            res.status(500).json({ error: "Erro ao excluir histórico" });
+            res.status(500).json({ error: "Erro ao excluir histórico da tarefa" });
           });
         }
 
         db.query(
-          "DELETE FROM tasks WHERE id = ?",
+          "DELETE FROM comments WHERE task_id = ?",
           [taskId],
-          (error, results) => {
+          (error) => {
             if (error) {
               return db.rollback(() => {
-                res.status(500).json({ error: "Erro ao excluir a tarefa" });
+                res.status(500).json({ error: "Erro ao excluir comentários da tarefa" });
               });
             }
 
-            if (results.affectedRows === 0) {
-              return db.rollback(() => {
-                res.status(404).json({ error: "Tarefa não encontrada" });
-              });
-            }
+            db.query(
+              "DELETE FROM tasks WHERE id = ?",
+              [taskId],
+              (error, results) => {
+                if (error) {
+                  return db.rollback(() => {
+                    res.status(500).json({ error: "Erro ao excluir a tarefa" });
+                  });
+                }
 
-            db.commit((err) => {
-              if (err) {
-                return db.rollback(() => {
-                  res
-                    .status(500)
-                    .json({ error: "Erro ao confirmar a exclusão" });
+                if (results.affectedRows === 0) {
+                  return db.rollback(() => {
+                    res.status(404).json({ error: "Tarefa não encontrada" });
+                  });
+                }
+
+                db.commit((err) => {
+                  if (err) {
+                    return db.rollback(() => {
+                      res
+                        .status(500)
+                        .json({ error: "Erro ao confirmar a exclusão" });
+                    });
+                  }
+                  res.status(200).json({ message: "Tarefa excluída com sucesso" });
                 });
               }
-              res.status(200).json({ message: "Tarefa excluída com sucesso" });
-            });
+            );
           }
         );
       }
