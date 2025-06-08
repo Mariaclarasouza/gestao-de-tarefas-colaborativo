@@ -55,8 +55,13 @@ router.post(
       .isLength({ min: 6 })
       .withMessage("A senha deve ter pelo menos 6 caracteres"),
     body("newEntityName")
-      .notEmpty()
-      .withMessage("Nome da nova entidade é obrigatório para administradores"),
+      .custom((value) => {
+        if (!value || value.trim() === "") {
+          throw new Error("Insira um valor válido para o nome da nova entidade");
+        }
+        return true;
+      }),
+    
   ],
   async (req, res) => {
     const { first_name, last_name, email, password, role, newEntityName } =
@@ -73,6 +78,12 @@ router.post(
     }
 
     try {
+      const [existingUser] = await db
+      .promise()
+      .query("SELECT id FROM users WHERE email = ?", [email]);
+    if (existingUser.length > 0) {
+      return res.status(400).json({ error: "Email já está em uso" });
+    }
       const [entityResult] = await db
         .promise()
         .query("INSERT INTO entities (name) VALUES (?)", [
