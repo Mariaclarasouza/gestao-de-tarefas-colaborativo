@@ -254,7 +254,15 @@ router.put("/tasks/:id", authenticateToken, async (req, res) => {
       await saveTaskHistory(id, user_id, changes);
     }
 
-    res.status(200).json({ message: "Tarefa atualizada" });
+    const [updatedTaskRows] = await db
+  .promise()
+  .query("SELECT * FROM tasks WHERE id = ?", [id]);
+
+    res.status(200).json({ 
+      message: "Tarefa atualizada", 
+      task: updatedTaskRows[0] 
+    });
+
   } catch (error) {
     console.error("Erro ao atualizar tarefa:", error);
     res.status(500).json({ error: "Erro ao atualizar tarefa" });
